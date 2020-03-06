@@ -6,7 +6,7 @@ import sqlite3
 
 #Update or initialize database
 def updateDatabase(itemnums):
-    conn=sqlite3.connect('main.db')
+    conn=sqlite3.connect('items.db')
     c=conn.cursor()
     #check if 'prices' table already exists
     c.execute('''SELECT count(name) FROM sqlite_master WHERE type='table' AND name='prices' ''')
